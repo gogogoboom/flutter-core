@@ -10,8 +10,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  #网络请求框架
   dio: ^4.0.4
+  #漂亮的DIO Logger是一个DIO拦截器
   pretty_dio_logger: ^1.1.1
+  #类android retrofit
+  retrofit: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -23,17 +27,6 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
-  # This section identifies this Flutter project as a plugin project.
-  # The 'pluginClass' and Android 'package' identifiers should not ordinarily
-  # be modified. They are used by the tooling to maintain consistency when
-  # adding or updating assets for this project.
-  plugin:
-    platforms:
-      android:
-        package: com.example.gogoboom_flutter_core
-        pluginClass: GogoboomFlutterCorePlugin
-      ios:
-        pluginClass: GogoboomFlutterCorePlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

@@ -1,14 +1,13 @@
 library gogoboom_flutter_core;
 
-import 'dart:async';
+import 'package:dio/dio.dart';
 
-import 'package:flutter/services.dart';
+import 'http/base_dio.dart';
 
-class GogoboomFlutterCore {
-  static const MethodChannel _channel = MethodChannel('gogoboom_flutter_core');
+export 'package:dio/dio.dart' hide Headers;
+export 'package:retrofit/retrofit.dart';
+export 'http/base_dio.dart';
+export 'http/base_error.dart';
+export 'core_config.dart';
 
-  static Future<String?> get platformVersion async {
-    final String? version = await _channel.invokeMethod('getPlatformVersion');
-    return version;
-  }
-}
+final Dio dio = BaseDio.getInstance().getDio();
