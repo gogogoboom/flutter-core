@@ -12,4 +12,4 @@ export 'http/base_error.dart';
 export 'core_config.dart';
 
 final Dio dio = BaseDio.getInstance().getDio();
-final CoreConfig coreConfig = CoreConfig();
+CoreConfig coreConfig = CoreConfig();
