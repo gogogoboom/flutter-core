@@ -1,15 +1,10 @@
-import 'package:dio/dio.dart';
-import 'package:gogoboom_flutter_core/core_config.dart';
+import 'package:gogoboom_flutter_core/gogoboom_flutter_core.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
-
-import 'base_error.dart';
 
 class BaseDio {
   BaseDio._();
 
   static BaseDio? _instance;
-
-  static final CoreConfig _coreConfig = CoreConfig();
 
   static BaseDio getInstance() {
     _instance ??= BaseDio._();
@@ -19,9 +14,9 @@ class BaseDio {
   Dio getDio() {
     final Dio dio = Dio();
     dio.options = BaseOptions(
-        receiveTimeout: _coreConfig.receiveTimeout,
-        connectTimeout: _coreConfig.connectTimeout); // 设置超时时间等 ...
-    dio.interceptors.addAll(_coreConfig.interceptors);
+        receiveTimeout: coreConfig.receiveTimeout,
+        connectTimeout: coreConfig.connectTimeout); // 设置超时时间等 ...
+    dio.interceptors.addAll(coreConfig.interceptors);
     dio.interceptors.add(PrettyDioLogger(
       requestHeader: true,
       requestBody: true,
