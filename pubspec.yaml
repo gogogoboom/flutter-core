@@ -1,7 +1,7 @@
 name: gogoboom_flutter_core
 description: A new Flutter project.
 version: 0.0.1
-homepage:
+homepage: https://github.com/gogogoboom/flutter-core
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
